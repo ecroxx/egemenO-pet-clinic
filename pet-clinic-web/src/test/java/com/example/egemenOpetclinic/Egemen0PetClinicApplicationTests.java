@@ -1,4 +1,4 @@
-package com.example.egemen0petclinic;
+package com.example.egemenOpetclinic;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

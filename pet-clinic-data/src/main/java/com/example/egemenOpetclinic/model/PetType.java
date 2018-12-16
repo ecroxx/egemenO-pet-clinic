@@ -1,4 +1,4 @@
-package com.example.egemen0petclinic.model;
+package com.example.egemenOpetclinic.model;
 
 public class PetType {
 

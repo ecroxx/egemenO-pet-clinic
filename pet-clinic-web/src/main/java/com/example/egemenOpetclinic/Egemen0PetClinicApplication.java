@@ -1,4 +1,4 @@
-package com.example.egemen0petclinic;
+package com.example.egemenOpetclinic;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
