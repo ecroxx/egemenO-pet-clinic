@@ -13,7 +13,7 @@
     </parent>
     <groupId>com.example</groupId>
     <artifactId>egemen0-pet-clinic</artifactId>
-    <version>0.0.2</version>
+    <version>0.0.3-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>egemen0-pet-clinic</name>
     <description>EgemenO Pet Clinic Application</description>
@@ -55,7 +55,7 @@
 
     <scm>
         <developerConnection>scm:git:https://github.com/ecroxx/egemenO-pet-clinic.git</developerConnection>
-      <tag>egemen0-pet-clinic-0.0.2</tag>
+      <tag>HEAD</tag>
   </scm>
 
 </project>
