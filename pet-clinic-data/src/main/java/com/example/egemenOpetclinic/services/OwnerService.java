@@ -1,8 +1,6 @@
 package com.example.egemenOpetclinic.services;
 
-import com.example.egemenOpetclinic.model.Owner;
-
-public interface OwnerService extends CrudService<Owner,Long> {
+public interface OwnerService<Owner,Long> extends CrudService<Owner,Long> {
 
     Owner findByLastName(String lastName);
 
