@@ -2,9 +2,10 @@ package com.example.egemenOpetclinic.services.map;
 
 import com.example.egemenOpetclinic.model.Pet;
 import com.example.egemenOpetclinic.services.PetService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
-
+@Service
 public class PetServiceMap extends AbstractMapService<Pet,Long> implements PetService<Pet,Long> {
 
 
