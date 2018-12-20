@@ -8,11 +8,21 @@
 <h1 th:text="'List of Owners'">Owners List</h1>
 <!--/*@thymesVar id="owner" type="com.example.egemenOpetclinic.model.Owner"*/-->
 <table>
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+    </tr>
+    </thead>
+
+    <tbody>
 <tr th:each="owner: ${owners}">
     <td th:text="${owner.id}">1</td>
     <td th:text="${owner.firstName}">Egemen</td>
     <td th:text="${owner.lastName}">Ozkan</td>
 </tr>
+    </tbody>
 </table>
 </body>
 </html>
