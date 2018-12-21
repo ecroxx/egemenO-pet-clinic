@@ -1,4 +1,6 @@
 package com.example.egemenOpetclinic.services;
 
-public interface PetTypeService<PetType,Long> extends CrudService<PetType,Long> {
+import com.example.egemenOpetclinic.model.PetType;
+
+public interface PetTypeService extends CrudService<PetType,Long> {
 }
