@@ -1,7 +1,9 @@
 package com.example.egemenOpetclinic.services;
 
 
-public interface VetService<Vet,Long> extends CrudService<Vet,Long>{
+import com.example.egemenOpetclinic.model.Vet;
+
+public interface VetService extends CrudService<Vet,Long>{
   /*  Vet findById(Long id);
     Vet save(Vet vet);
     Set<Vet> findAll(); */
