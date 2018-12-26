@@ -5,11 +5,13 @@ import com.example.egemenOpetclinic.model.Pet;
 import com.example.egemenOpetclinic.services.OwnerService;
 import com.example.egemenOpetclinic.services.PetService;
 import com.example.egemenOpetclinic.services.PetTypeService;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
 @Service
+@Profile({"default","OwnerMapService"})
 public class OwnerMapService extends AbstractMapService<Owner,Long> implements OwnerService {
 
 

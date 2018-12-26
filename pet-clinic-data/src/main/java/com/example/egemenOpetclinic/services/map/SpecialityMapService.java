@@ -2,11 +2,14 @@ package com.example.egemenOpetclinic.services.map;
 
 import com.example.egemenOpetclinic.model.Speciality;
 import com.example.egemenOpetclinic.services.SpecialityService;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
 @Service
+@Profile({"default","SpecialityMapService"})
+
 public class SpecialityMapService extends AbstractMapService<Speciality,Long> implements SpecialityService {
 
     @Override
