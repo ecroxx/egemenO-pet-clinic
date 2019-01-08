@@ -24,7 +24,9 @@ public class OwnerController {
     }
 
     @InitBinder
-    public void setAllowedFields(WebDataBinder webDataBinder){ webDataBinder.setAllowedFields("id");}
+    public void setAllowedFields(WebDataBinder dataBinder) {
+        dataBinder.setDisallowedFields("id");
+    }
     @RequestMapping({"","/","/index","/index.html"})
     public String listOwners(Model model){
         model.addAttribute("owners",ownerService.findAll());
@@ -56,7 +58,7 @@ public class OwnerController {
         } else if (results.size() == 1) {
             // 1 owner found
             owner = results.get(0);
-            return "redirect:/owners/" + owner.getId();
+            return "redirect:/owners/"+owner.getId();
         } else {
             // multiple owners found
             model.addAttribute("selections", results);
@@ -64,10 +66,12 @@ public class OwnerController {
         }
     }
 
+
     @GetMapping("/{ownerId}")
-    public ModelAndView showOwner(@PathVariable String ownerId){
-        ModelAndView modelAndView=new ModelAndView("owners/ownerDetails");
-        modelAndView.addObject(ownerService.findById(Long.valueOf(ownerId)));
-        return modelAndView;
+    public ModelAndView showOwner(@PathVariable Long ownerId) {
+        ModelAndView mav = new ModelAndView("owners/ownerDetails");
+        mav.addObject(ownerService.findById(ownerId));
+        return mav;
     }
+
 }
