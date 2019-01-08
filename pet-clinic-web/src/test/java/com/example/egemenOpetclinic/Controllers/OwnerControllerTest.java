@@ -16,7 +16,7 @@ import org.springframework.ui.Model;
 import java.util.HashSet;
 import java.util.Set;
 
-import static org.hamcrest.Matchers.hasSize;
+import static org.hamcrest.Matchers.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.*;
@@ -91,6 +91,16 @@ class OwnerControllerTest {
         assertEquals("notimplemented",ownerController.findOwners());
         verifyZeroInteractions(ownerService);
 
+    }
+
+    @Test
+    void showOwnersTest() throws Exception{
+        Owner owner=Owner.builder().id(3L).build();
+        when(ownerService.findById(anyLong())).thenReturn(owner);
+        controllerTest.perform(get("/owners/1"))
+                .andExpect(status().isOk())
+                .andExpect(view().name("owners/ownerDetails"))
+                .andExpect(model().attribute("owner",hasProperty("id",is(3L))));
     }
 
 
