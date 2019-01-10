@@ -17,7 +17,7 @@ import java.time.LocalDate;
 public class Visit extends BaseEntity{
     @Column(name = "date")
     @DateTimeFormat(pattern = "yyyy-MM-dd")
-    private LocalDate localDate;
+    private LocalDate date;
 
     @Column(name = "description")
     private String description;
@@ -26,9 +26,9 @@ public class Visit extends BaseEntity{
     @JoinColumn(name = "pet_id")
     private Pet pet;
 
-    public void setLocalDate(LocalDate localDate) {
-        this.localDate = localDate;
-    }
+    //public void setLocalDate(LocalDate localDate) {
+       // this.localDate = localDate;
+   // }
 
     /*
     public LocalDate getLocalDate() {
